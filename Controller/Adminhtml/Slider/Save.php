@@ -18,12 +18,11 @@ class Save extends \Magento\Backend\App\Action
      * @var \Magento\Framework\View\Result\PageFactory
      */
 	public function execute()
-    {
-		
+    {		
         $data = $this->getRequest()->getParams();
-        if ($data) {
-            $model = $this->_objectManager->create('Excellence\ExcellenceSlider\Model\Slider');
-		  
+        if ($data) 
+        {
+            $model = $this->_objectManager->create('Excellence\ExcellenceSlider\Model\Slider');		  
             if (isset($_FILES['path']) && isset($_FILES['path']['name']) && strlen($_FILES['path']['name'])) {
                 /*
                 * Save image upload
@@ -65,8 +64,7 @@ class Save extends \Magento\Backend\App\Action
             $id = $this->getRequest()->getParam('id');
             if ($id) {
                 $model->load($id);
-            }
-			
+            }			
             $model->setData($data);
 			
             try {
