@@ -113,7 +113,7 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
 		}
 		catch(Exception $e)
 		{
-			echo $e->getMessage();die;
+			echo $e->getMessage();
 		}
     }
 

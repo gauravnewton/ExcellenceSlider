@@ -14,8 +14,8 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
 
         parent::_construct();
 
-        $this->buttonList->update('save', 'label', __('Save Block'));
-        $this->buttonList->update('delete', 'label', __('Delete Block'));
+        $this->buttonList->update('save', 'label', __('Save Slide'));
+        $this->buttonList->update('delete', 'label', __('Delete Slide'));
 
         $this->buttonList->add(
             'saveandcontinue',
@@ -50,7 +50,7 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
         if ($this->_coreRegistry->registry('checkmodule_checkmodel')->getId()) {
             return __("Edit Item '%1'", $this->escapeHtml($this->_coreRegistry->registry('checkmodule_checkmodel')->getTitle()));
         } else {
-            return __('New Item');
+            return __('New Slide');
         }
     }
 }

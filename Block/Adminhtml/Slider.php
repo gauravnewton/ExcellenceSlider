@@ -13,7 +13,7 @@ class Slider extends \Magento\Backend\Block\Widget\Grid\Container
         $this->_controller = 'adminhtml_slider';/*block grid.php directory*/
         $this->_blockGroup = 'Excellence_ExcellenceSlider';
         $this->_headerText = __('Slider');
-        $this->_addButtonLabel = __('Add New Entry'); 
+        $this->_addButtonLabel = __('Add New Slide'); 
         parent::_construct();
 		
     }
