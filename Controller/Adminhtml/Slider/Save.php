@@ -23,10 +23,7 @@ class Save extends \Magento\Backend\App\Action
         $data = $this->getRequest()->getParams();
         if ($data) {
             $model = $this->_objectManager->create('Excellence\ExcellenceSlider\Model\Slider');
-		  // echo "<pre>";
-    //       print_r($_FILES['path']);
-    //       die("vgvhb");
-            //start block upload image
+		  
             if (isset($_FILES['path']) && isset($_FILES['path']['name']) && strlen($_FILES['path']['name'])) {
                 /*
                 * Save image upload
@@ -65,11 +62,7 @@ class Save extends \Magento\Backend\App\Action
             }
             //end block upload image
             
-
-
-
-
-			$id = $this->getRequest()->getParam('id');
+            $id = $this->getRequest()->getParam('id');
             if ($id) {
                 $model->load($id);
             }

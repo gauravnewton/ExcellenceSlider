@@ -4,7 +4,6 @@
         <resources>
             <resource id="Magento_Adminhtml::admin">
                 <resource id="Excellence_ExcellenceSlider::slider" title="slider" sortOrder="100"/>
- <!--AddMenuAcl-->
             </resource>
         </resources>
     </acl>

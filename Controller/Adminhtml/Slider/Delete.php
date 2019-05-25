@@ -15,7 +15,7 @@ class Delete extends \Magento\Backend\App\Action
                 $this->messageManager->addSuccess(
                     __('Delete successfully !')
                 );
-            } catch (\Exception $e) {
+            }catch (\Exception $e) {
                 $this->messageManager->addError($e->getMessage());
             }
 	    $this->_redirect('*/*/');
