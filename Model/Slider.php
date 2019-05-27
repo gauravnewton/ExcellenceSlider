@@ -30,6 +30,8 @@ class Slider extends \Magento\Framework\Model\AbstractModel
         parent::__construct($context, $registry, $resource, $resourceCollection, $data);
     }
 
+    
+
     /**
      * @return void
      */
@@ -38,5 +40,4 @@ class Slider extends \Magento\Framework\Model\AbstractModel
         $this->_init('Excellence\ExcellenceSlider\Model\ResourceModel\Slider');
     }
 
-   
 }
