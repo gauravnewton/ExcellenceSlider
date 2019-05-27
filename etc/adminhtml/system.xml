@@ -10,7 +10,7 @@
             <class>separator-top</class>
             <label>Slider Configuration</label>
             <tab>excellence</tab>
-            <resource>Excellence_ExcellenceSlider::slider_config</resource>
+            <resource>Magento_ExcellenceSlider::excellenceslider</resource>
             <group id="active_display" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
                 <!-- add a new group with id active display -->
                 <label>Excellence Configuration Options</label>
