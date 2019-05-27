@@ -6,7 +6,7 @@
                 <resource id="Magento_Adminhtml::stores">
                     <resource id="Magento_Adminhtml::stores_settings">
                         <resource id="Magento_Adminhtml::config">
-                            <resource id="Excellence_First::test_config" title="Excellence Section" />
+                            <resource id="Excellence_ExcellenceSlider::slider_config" title="Excellence Section" />
                         </resource>
                     </resource>
                 </resource>

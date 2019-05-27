@@ -15,7 +15,6 @@
                     <argument name="name" xsi:type="string">allslides_section</argument>
                     <argument name="block" xsi:type="string">excellenceslider_slider_edit_tab_allslides</argument>
                 </action>
-				<!--CedAddTab-->
 			</block>
         </referenceContainer>
     </body>

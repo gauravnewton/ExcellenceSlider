@@ -9,15 +9,9 @@ use Magento\Framework\Setup\InstallSchemaInterface;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\SchemaSetupInterface;
 
-/**
- * @codeCoverageIgnore
- */
 class InstallSchema implements InstallSchemaInterface
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function install(SchemaSetupInterface $setup, ModuleContextInterface $context)
+   public function install(SchemaSetupInterface $setup, ModuleContextInterface $context)
     {
 	
         $installer = $setup;
@@ -50,17 +44,13 @@ class InstallSchema implements InstallSchemaInterface
             null,
             ['nullable' => false],
             'status'
-        )
-		/*{{CedAddTableColumn}}}*/
-		
-		
+        )		
         ->setComment(
             'Excellence ExcellenceSlider excellenceslider_slider'
         );
 		
 		$installer->getConnection()->createTable($table);
-		/*{{CedAddTable}}*/
-
+        
         $installer->endSetup();
 
     }

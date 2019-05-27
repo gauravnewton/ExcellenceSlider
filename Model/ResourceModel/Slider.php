@@ -1,7 +1,4 @@
 <?php
-/**
- * Copyright © 2015 Excellence. All rights reserved.
- */
 namespace Excellence\ExcellenceSlider\Model\ResourceModel;
 
 /**

@@ -14,17 +14,15 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         $this->_scopeConfig = $scopeConfig;
         return parent::__construct( $context);
     }
-    public function getDataEnabled()
+    public function isSliderEnabled()
     {
       
       return $this->_scopeConfig->getValue('excellence/active_display/scope');
     }
 
     public function getSliderUrl(){
-    	$row = $this->_sliderFactory->create()->getCollection()->addFieldToFilter('status', array('eq' => 1));;
-    	// echo "<pre>";
-    	// print_r($row->getData());
-    	// die("");
+    	$row = $this->_sliderFactory->create()
+                    ->getCollection()->addFieldToFilter('status', array('eq' => 1));
         return $row;
         
     }
