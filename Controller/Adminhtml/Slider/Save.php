@@ -4,7 +4,7 @@ use Magento\Framework\App\Filesystem\DirectoryList;
 class Save extends \Magento\Backend\App\Action
 {
     public function __construct(
-        \Magento\Framework\App\Action\Context $context,
+        \Magento\Backend\App\Action\Context $context,
         \Magento\Framework\Image\AdapterFactory $adapterFactory,
         \Magento\MediaStorage\Model\File\UploaderFactory $uploader,
         \Magento\Framework\Filesystem $filesystem

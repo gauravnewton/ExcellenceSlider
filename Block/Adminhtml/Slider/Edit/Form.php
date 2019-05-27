@@ -2,16 +2,10 @@
 namespace Excellence\ExcellenceSlider\Block\Adminhtml\Slider\Edit;
 class Form extends \Magento\Backend\Block\Widget\Form\Generic
 {
-    /**
-     * Customer Service.
-     *
-     * @var CustomerAccountServiceInterface
-     */
     protected $_customerAccountService;
 
     protected function _prepareForm()
     {
-        /** @var \Magento\Framework\Data\Form $form */
         $form = $this->_formFactory->create(
             array(
                 'data' => array(
