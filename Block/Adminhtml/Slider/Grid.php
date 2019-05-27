@@ -167,14 +167,16 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
 
     public function getGridUrl()
     {
-        return $this->getUrl('excellenceslider/*/index', ['_current' => true]);
+        return $this->getUrl('excellenceslider/*/index',
+                             ['_current' => true]);
     }
 
     public function getRowUrl($row)
     {
         return $this->getUrl(
             'excellenceslider/*/edit',
-            ['store' => $this->getRequest()->getParam('store'), 'id' => $row->getId()]
+            ['store' => $this->getRequest()
+                             ->getParam('store'), 'id' => $row->getId()]
         );
     }
 }

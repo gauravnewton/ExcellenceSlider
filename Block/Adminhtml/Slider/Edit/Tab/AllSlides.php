@@ -17,7 +17,8 @@ class AllSlides extends \Magento\Backend\Block\Widget\Form\Generic implements \M
 
     protected function _prepareForm()
     {
-		$model = $this->_coreRegistry->registry('excellenceslider_slider');
+		$model = $this->_coreRegistry
+                      ->registry('excellenceslider_slider');
 		$isElementDisabled = false;
         $form = $this->_formFactory->create();
 
