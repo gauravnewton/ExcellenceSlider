@@ -1,14 +1,7 @@
 <?php
-/**
- * Copyright © 2015 Excellence . All rights reserved.
- * 
- */
+
 namespace Excellence\ExcellenceSlider\Block;
 
-/**
- * Abstract product block context
- * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
- */
 class Context extends \Magento\Framework\View\Element\Template\Context
 {
     /**
@@ -38,39 +31,6 @@ class Context extends \Magento\Framework\View\Element\Template\Context
 	
 	
 
-    /**
-	 * @param \Magento\Framework\App\RequestInterface $request
-     * @param \Magento\Framework\View\LayoutInterface $layout
-     * @param \Magento\Framework\Event\ManagerInterface $eventManager
-     * @param \Magento\Framework\UrlInterface $urlBuilder
-     * @param \Magento\Framework\App\CacheInterface $cache
-     * @param \Magento\Framework\View\DesignInterface $design
-     * @param \Magento\Framework\Session\SessionManagerInterface $session
-     * @param \Magento\Framework\Session\SidResolverInterface $sidResolver
-     * @param \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig
-     * @param \Magento\Framework\View\Asset\Repository $assetRepo
-     * @param \Magento\Framework\View\ConfigInterface $viewConfig
-     * @param \Magento\Framework\App\Cache\StateInterface $cacheState
-     * @param \Psr\Log\LoggerInterface $logger
-     * @param \Magento\Framework\Escaper $escaper
-     * @param \Magento\Framework\Filter\FilterManager $filterManager
-     * @param \Magento\Framework\Stdlib\DateTime\TimezoneInterface $localeDate
-     * @param \Magento\Framework\Translate\Inline\StateInterface $inlineTranslation
-     * @param \Magento\Framework\Filesystem $filesystem
-     * @param \Magento\Framework\View\FileSystem $viewFileSystem
-     * @param \Magento\Framework\View\TemplateEnginePool $enginePool
-     * @param \Magento\Framework\App\State $appState
-     * @param \Magento\Store\Model\StoreManagerInterface $storeManager
-     * @param \Magento\Framework\View\Page\Config $pageConfig
-     * @param \Magento\Framework\View\Element\Template\File\Resolver $resolver
-     * @param \Magento\Framework\View\Element\Template\File\Validator $validator
-     * @param \Excellence\ExcellenceSlider\Helper\Data $devToolHelper
-     * @param \Magento\Framework\Registry $registry
-	 * @param \Excellence\ExcellenceSlider\Model\Config $config
-	 * @param \Magento\Framework\ObjectManagerInterface
-	 * @param \Magento\Framework\UrlFactory
-     * @SuppressWarnings(PHPMD.ExcessiveParameterList)
-     */
     public function __construct(
 		\Magento\Framework\App\RequestInterface $request,
         \Magento\Framework\View\LayoutInterface $layout,

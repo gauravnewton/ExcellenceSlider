@@ -1,24 +1,19 @@
 <?php 
 $helper = $this->helper('Excellence\ExcellenceSlider\Helper\Data');
-$method=$helper->getDataEnabled();
+$sliderStatus=$helper->isSliderEnabled();
 
 $_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance 
 $storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
 $currentStore = $storeManager->getStore();
 $mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
-// $resource = $objectManager->get('Magento\Framework\App\ResourceConnection');
-// $connection = $resource->getConnection();
-// $tableName = $resource->getTableName('excellence_excellenceslider_slider');
 $sliderCollection = $helper->getSliderUrl();
 
-
-// echo "Slider Images";
-if ($method=='1'){ ?>
+if ($sliderStatus == '1'){ 
+  ?>
 <div class="owl-carousel owl-theme home-page-slider">
   <?php
 
      foreach($sliderCollection->getData() as $slide){
-      //print_r( $slide); die();
         ?>
         <div>
             <img src="<?php echo $mediaUrl.$slide['path']; ?>" />

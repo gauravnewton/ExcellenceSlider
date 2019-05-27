@@ -40,20 +40,6 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
      */
     protected $_websiteFactory;
 
-    /**
-     * @param \Magento\Backend\Block\Template\Context $context
-     * @param \Magento\Backend\Helper\Data $backendHelper
-     * @param \Magento\Store\Model\WebsiteFactory $websiteFactory
-     * @param \Magento\Eav\Model\ResourceModel\Entity\Attribute\Set\CollectionFactory $setsFactory
-     * @param \Magento\Catalog\Model\ProductFactory $productFactory
-     * @param \Magento\Catalog\Model\Product\Type $type
-     * @param \Magento\Catalog\Model\Product\Attribute\Source\Status $status
-     * @param \Magento\Catalog\Model\Product\Visibility $visibility
-     * @param \Magento\Framework\Module\Manager $moduleManager
-     * @param array $data
-     *
-     * @SuppressWarnings(PHPMD.ExcessiveParameterList)
-     */
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,
         \Magento\Backend\Helper\Data $backendHelper,
@@ -99,16 +85,9 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
     protected function _prepareCollection()
     {
 		try{
-			
-			
 			$collection =$this->_collectionFactory->load();
-
-		  
-
-			$this->setCollection($collection);
-
-			parent::_prepareCollection();
-		  
+            $this->setCollection($collection);
+			parent::_prepareCollection();		  
 			return $this;
 		}
 		catch(Exception $e)
@@ -117,10 +96,6 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
 		}
     }
 
-    /**
-     * @param \Magento\Backend\Block\Widget\Grid\Column $column
-     * @return $this
-     */
     protected function _addColumnFilterToCollection($column)
     {
         if ($this->getCollection()) {
@@ -138,10 +113,6 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
         return parent::_addColumnFilterToCollection($column);
     }
 
-    /**
-     * @return $this
-     * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
-     */
     protected function _prepareColumns()
     {
         $this->addColumn(
@@ -170,8 +141,6 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
                 'class' => 'status'
             ]
         );
-		/*{{CedAddGridColumn}}*/
-
         $block = $this->getLayout()->getBlock('grid.bottom.links');
         if ($block) {
             $this->setChild('grid.bottom.links', $block);
@@ -180,9 +149,6 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
         return parent::_prepareColumns();
     }
 
-     /**
-     * @return $this
-     */
     protected function _prepareMassaction()
     {
         $this->setMassactionIdField('id');
@@ -199,18 +165,11 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
         return $this;
     }
 
-    /**
-     * @return string
-     */
     public function getGridUrl()
     {
         return $this->getUrl('excellenceslider/*/index', ['_current' => true]);
     }
 
-    /**
-     * @param \Magento\Catalog\Model\Product|\Magento\Framework\Object $row
-     * @return string
-     */
     public function getRowUrl($row)
     {
         return $this->getUrl(
