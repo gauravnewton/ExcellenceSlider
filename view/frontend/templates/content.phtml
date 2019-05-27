@@ -19,7 +19,11 @@ if ($method=='1'){ ?>
 
      foreach($sliderCollection->getData() as $slide){
       //print_r( $slide); die();
-        ?><div><img src="<?php echo $mediaUrl.$slide['path']; ?>" /></div><?php
+        ?>
+        <div>
+            <img src="<?php echo $mediaUrl.$slide['path']; ?>" />
+        </div>
+        <?php
      }
   ?>
 </div>
